@@ -1,0 +1,33 @@
+query{
+  authors{
+     id,
+    name,
+    books {
+      id,
+      title,
+      publisher
+    }
+  }
+}
+
+query {
+authorById(id:1){
+id
+name
+}
+}
+
+mutation{
+addBook(book : {title:"Book5" ,publisher:"anas",authorId:1 })
+{title}
+}
+
+
+mutation {
+  deleteBook(id: 3) 
+}
+
+mutation{
+updateBook(id:1,book : {title:"Book5" ,publisher:"anas",authorId:1 })
+{title}
+}
